@@ -88,19 +88,17 @@ class App extends Component {
 
 
     return (
-      <StyleRoot>
-        <div className="App">
-          <h1> Hi, I'm a React App </h1>
-          <p className={classes.join(' ')}> This is really working </p>
-          <p className={["bold", "red"]}> This is really working 2 </p>
-          <p> {classes} </p>
+      <div className="App">
+        <h1> Hi, I'm a React App </h1>
+        <p className={classes.join(' ')}> This is really working </p>
+        <p className={["bold", "red"]}> This is really working 2 </p>
+        <p> {classes} </p>
 
-          <button
-            style={style}
-            onClick={this.togglePersonHandler}>Show Names</button>
-          {persons}
-        </div>
-      </StyleRoot>
+        <button
+          style={style}
+          onClick={this.togglePersonHandler}>Show Names</button>
+        {persons}
+      </div>
     );
   }
 }
