@@ -1,13 +1,12 @@
 import React,  {Component} from 'react';
 import './App.css';
 import Person from './Person/Person';
-import Radium, {StyleRoot} from 'radium';
 
 class App extends Component {
 
   state = {
     persons: [
-      {id:1, name: 'Max', age:28},
+      {id:1, name: 'Maximia', age:28},
       {id:2, name: 'Manu', age:28},
       {id:3, name: 'Stephanie', age:28}
     ],
@@ -48,10 +47,6 @@ class App extends Component {
       border: '1x solid blue',
       padding: '8px',
       cursor: 'pointer',
-      ':hover': {
-        backgroundColor: 'lightGreen',
-        color: 'black'
-        }
       };
 
     let persons = null;
@@ -71,10 +66,6 @@ class App extends Component {
         </div>
       );
       style.backgroundColor = 'red';
-      style[':hover'] = {
-        backgroundColor: 'salmon',
-        color: 'black'
-        };
     }
 
     // let classes = ['red', 'bold'].join(' ');
@@ -88,21 +79,18 @@ class App extends Component {
 
 
     return (
-      <StyleRoot>
         <div className="App">
           <h1> Hi, I'm a React App </h1>
           <p className={classes.join(' ')}> This is really working </p>
           <p className={["bold", "red"]}> This is really working 2 </p>
           <p> {classes} </p>
-
           <button
             style={style}
             onClick={this.togglePersonHandler}>Show Names</button>
           {persons}
         </div>
-      </StyleRoot>
     );
   }
 }
 
-export default Radium(App)
+export default App
